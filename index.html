@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Pink Registration</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- FIRST PAGE -->
+    <div class="page" id="welcomePage">
+
+        <div class="box">
+
+            <h1>Welcome!</h1>
+
+            <p>Do you want to register?</p>
+
+            <div class="buttons">
+                <button onclick="showRegister()">Yes</button>
+
+                <button onclick="sayThankYou()">No</button>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- REGISTRATION PAGE -->
+    <div class="page hidden" id="registerPage">
+
+        <div class="box">
+
+            <h1>Register</h1>
+
+            <form onsubmit="registerUser(event)">
+
+                <input 
+                    type="text" 
+                    id="name"
+                    placeholder="Name"
+                    required
+                >
+
+                <input 
+                    type="password" 
+                    id="password"
+                    placeholder="Password"
+                    required
+                >
+
+                <input 
+                    type="date" 
+                    id="dob"
+                    required
+                >
+
+                <input 
+                    type="email" 
+                    id="email"
+                    placeholder="Email"
+                    required
+                >
+
+                <button type="submit">
+                    Continue
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+    <!-- THANK YOU PAGE -->
+    <div class="page hidden" id="thankYouPage">
+
+        <div class="box">
+
+            <h1 id="thankYouText">Thank you!</h1>
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
